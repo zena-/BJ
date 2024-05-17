@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>BJ's Wholesale</title>
+
+	<style>
+		body {
+      padding: 20px;
+    }
+
+		a {
+			text-decoration: none;
+		}
+		
+    .carouselContainer {
+      position: relative;
+      width: 600px;
+      overflow: hidden;
+      margin: auto;
+    }
+
+    .carouselWrapper {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carouselItem {
+      flex: 0 0 33.3333%;
+      max-width: 33.3333%;
+      padding: 10px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    .prodImage {
+      width: 100%;
+      height: auto;
+    }
+
+    .prod-name p {
+		  display: -webkit-box;
+		  -webkit-line-clamp: 2;
+		  -webkit-box-orient: vertical; 
+		  overflow: hidden;
+		  text-overflow: ellipsis;
+    }
+
+    .prod-name, .prodPrice, .prodView {
+      margin: 10px 0 20px;
+    }
+
+    .prodView {
+      padding: 10px 20px;
+      background-color: pink;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 7px;
+    }
+
+    .prodView:hover {
+      background-color: hotpink;
+    }
+
+    .carouselControls {
+      text-align: center;
+      margin-top: 70px;
+    }
+
+    .prev, .next {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: pink;
+      color: white;
+      cursor: pointer;
+      margin: 0 10px;
+      border-radius: 7px;
+    }
+
+    .prev:hover, .next:hover {
+      background-color: hotpink;
+    }
+  </style>
+</head>
+<body>
+	<!--
+	Please style and code this raw html to create a carousel with the following requirements:
+		* 3 items visible
+		* Prev/Next elements advance the carousel by 3 items at a time
+		* No empty space is visible within the carousel itself
+		* view button clicks through to the product page
+		* Feel free to use any methods you prefer to accomplish the interactivity 
+		* Feel free to style your preferred look and feel 
+		* Feel free to rework the HTML structure as needed to accomplish your preferred styling
+		* Use HTML/CSS/JavaScript as needed to accompish these requirements
+	-->
+	<div class="carouselContainer">
+		<div class="carouselWrapper">
+		  <div class="carouselItem">
+		    <img
+		      class="prodImage"
+		      src="https://s7d6.scene7.com/is/image/bjs/311170?$bjs-180$"
+		    />
+		    <div class="prod-name">
+		      <p>
+		        Dove Advanced Care Cool Essentials 48-Hour Antiperspirant Deodorant Dry
+		        Spray Bonus Pack
+		      </p>
+		    </div>
+		    <div class="prodPrice">$19.99</div>
+		    <a class="prodView" href="https://www.bjs.com/product/dove-advanced-care-cool-essentials-48-hour-antiperspirant-deodorant-dry-spray-bonus-pack/3000000000004510899">View</a>
+		  </div>
+
+		  <div class="carouselItem">
+		    <img
+		      class="prodImage"
+		      src="https://s7d6.scene7.com/is/image/bjs/53620?$bjs-400$"
+		    />
+		    <div class="prod-name">
+		      <p>
+		        Wellsley Farms Purified Water, 40 pk./16.9 oz.
+		      </p>
+		    </div>
+		    <div class="prodPrice">$4.99</div>
+		    <a class="prodView" href="https://www.bjs.com/product/wellsley-farms-purified-water-40-pk169-oz/3000000000000427090">View</a>
+		  </div>
+
+		  <div class="carouselItem">
+		    <img
+		      class="prodImage"
+		      src="https://s7d6.scene7.com/is/image/bjs/10700?$bjs-400$"
+		    />
+		    <div class="prod-name">
+		      <p>
+		        French's Classic Yellow Mustard, 2 pk./30 oz.
+		      </p>
+		    </div>
+		    <div class="prodPrice">$6.99</div>
+		    <a class="prodView" href="https://www.bjs.com/product/frenchs-classic-yellow-mustard-2-pk30-oz/3000000000000140459">View</a>
+		  </div>
+
+		  <div class="carouselItem">
+		    <img
+		      class="prodImage"
+		      src="https://s7d6.scene7.com/is/image/bjs/11243?$bjs-400$"
+		    />
+		    <div class="prod-name">
+		      <p>
+		        Lipton Lemon Iced Tea Mix, 38 qt.
+		      </p>
+		    </div>
+		    <div class="prodPrice">$8.99</div>
+		    <a class="prodView" href="https://www.bjs.com/product/lipton-lemon-iced-tea-mix-38-qt/3000000000000140513">View</a>
+		  </div>
+
+		  <div class="carouselItem">
+		    <img
+		      class="prodImage"
+		      src="https://s7d6.scene7.com/is/image/bjs/11675?$bjs-400$"
+		    />
+		    <div class="prod-name">
+		      <p>
+		        Country Time Lemonade Drink Mix, 82.5 oz.
+		      </p>
+		    </div>
+		    <div class="prodPrice">$9.99</div>
+		    <a class="prodView" href="https://www.bjs.com/product/country-time-lemonade-drink-mix-825-oz/3000000000000140657">View</a>
+		  </div>
+
+		  <div class="carouselItem">
+		    <img
+		      class="prodImage"
+		      src="https://s7d6.scene7.com/is/image/bjs/16287?$bjs-400$"
+		    />
+		    <div class="prod-name">
+		      <p>
+		        Wellsley Farms Hamburger Rolls, 16 ct.
+		      </p>
+		    </div>
+		    <div class="prodPrice">$3.99</div>
+		    <a class="prodView" href="https://www.bjs.com/product/wellsley-farms-hamburger-rolls-16-ct/3000000000000145519">View</a>
+		  </div>
+
+		  <div class="carouselItem">
+		    <img
+		      class="prodImage"
+		      src="https://s7d6.scene7.com/is/image/bjs/9192?$bjs-400$"
+		    />
+		    <div class="prod-name">
+		      <p>
+		        Original BUBBA Burger, 12 pk./5.3 oz.
+		      </p>
+		    </div>
+		    <div class="prodPrice">$23.99</div>
+		    <a class="prodView" href="https://www.bjs.com/product/original-bubba-burger-12-pk53-oz/3000000000000147591">View</a>
+		  </div>
+
+		  <div class="carouselItem">
+		    <img
+		      class="prodImage"
+		      src="https://s7d6.scene7.com/is/image/bjs/16852?$bjs-400$"
+		    />
+		    <div class="prod-name">
+		      <p>
+		        Pepsi Cola Cans, 36 ct./12 oz.
+		      </p>
+		    </div>
+		    <div class="prodPrice">$19.99</div>
+		    <a class="prodView" href="https://www.bjs.com/product/pepsi-cola-cans-36-ct12-oz/3000000000000146349">View</a>
+		  </div>
+
+		  <div class="carouselItem">
+		    <img
+		      class="prodImage"
+		      src="https://s7d6.scene7.com/is/image/bjs/23078?$bjs-400$"
+		    />
+		    <div class="prod-name">
+			    <p>
+			      Wellsley Farms Homestyle Potato Salad, 3 lbs.
+			    </p>
+			  </div>
+		    <div class="prodPrice">$6.49</div>
+		    <a class="prodView" href="https://www.bjs.com/product/wellsley-farms-homestyle-potato-salad-3-lbs/3000000000000160545">View</a>
+		  </div>
+
+		  <div class="carouselItem">
+		    <img
+		      class="prodImage"
+		      src="https://s7d6.scene7.com/is/image/bjs/26944?$bjs-400$"
+		    />
+		    <div class="prod-name">
+		      <p>
+		        Hidden Valley Original Ranch Homestyle Salad Dressing, 2 pk./40 oz.
+		      </p>
+		    </div>
+		    <div class="prodPrice">$13.69</div>
+		    <a class="prodView" href="https://www.bjs.com/product/hidden-valley-original-ranch-homestyle-salad-dressing-2-pk40-oz/3000000000000172061">View</a>
+		  </div>
+		</div>
+	</div>
+	<div class="carouselControls">
+	  <div class="prev">PREV</div>
+	  <div class="next">NEXT</div>
+	</div>
+
+	<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const carouselWrapper = document.querySelector('.carouselWrapper');
+      const prevButton = document.querySelector('.prev');
+      const nextButton = document.querySelector('.next');
+      let currentIndex = 0;
+
+      function updateCarousel() {
+        const items = document.querySelectorAll('.carouselItem');
+        const totalItems = items.length;
+        const visibleItems = 3;
+        const maxIndex = Math.ceil(totalItems / visibleItems) - 1;
+        let newTransform = -(currentIndex * 100 / visibleItems) + '%';
+        carouselWrapper.style.transform = `translateX(${newTransform})`;
+      }
+
+      function fillCarousel() {
+        const items = document.querySelectorAll('.carouselItem');
+        const totalItems = items.length;
+        const visibleItems = 3;
+        const remainingItems = totalItems % visibleItems;
+
+        if (remainingItems !== 0) {
+          for (let i = 0; i < visibleItems - remainingItems; i++) {
+            const clone = items[i].cloneNode(true);
+            carouselWrapper.appendChild(clone);
+          }
+        }
+      }
+
+      prevButton.addEventListener('click', function () {
+        const itemsPerClick = 3;
+        const items = document.querySelectorAll('.carouselItem');
+        const totalItems = items.length;
+        const visibleItems = 3;
+        currentIndex = (currentIndex - itemsPerClick < 0) ? Math.floor((totalItems - visibleItems) / visibleItems) * visibleItems : currentIndex - itemsPerClick;
+        updateCarousel();
+      });
+
+      nextButton.addEventListener('click', function () {
+        const itemsPerClick = 3;
+        const items = document.querySelectorAll('.carouselItem');
+        const totalItems = items.length;
+        const visibleItems = 3;
+        currentIndex = (currentIndex + itemsPerClick >= totalItems) ? 0 : currentIndex + itemsPerClick;
+        updateCarousel();
+      });
+
+      fillCarousel();
+      updateCarousel();
+    });
+</script>
+
+	<!-- for the below questions, please refrain from pasting the code into an editor -->
+	<!-- given the below CSS selectors, which one will apply to the given div -->
+	<!-- <style>
+	  div {
+	    border: 2px solid red;
+	  }
+	  #hello.world {
+	    border: 2px solid yellow;
+	  }
+	  div#hello .world {
+	    border: 2px solid black;
+	  }
+	  div {
+	    border: 2px solid green;
+	  }
+	</style> -->
+	<!-- <div id="hello" class="world"></div> -->
+	<!-- answer: #hello.world {border: 2px solid yellow;} -->
+
+
+	<!-- assuming div block has a relative position, and the child elements all have position: absolute and cover the same dimensions as div-block, which element will be shown? -->
+	<!-- <style>
+	  .element-a {
+	    z-index: 2;
+	    background: red;
+	  }
+	  .element-b {
+	    z-index: 1;
+	    background: green;
+	  }
+	  .element-ab {
+	    z-index: 3;
+	    background: blue;
+	  }
+	</style>
+
+	<div class="div-block">
+	  <div class="element-a"></div>
+	  <div class="element-b"><div class="element-ab"></div></div>
+	</div> -->
+	<!-- answer: .element-ab will be on top since it has a z-index of 3 -->
+
+</body>
+</html>
